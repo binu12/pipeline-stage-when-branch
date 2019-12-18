@@ -29,7 +29,7 @@ pipeline {
                         git config --global credential.helper "!echo password={GITPASSWORD}; echo"
                         git tag -d ${your_tag}
                         git tag ${your_tag}
-                        git push origin ${your_tag}
+                        https://${GIT_USERNAME}:${GIT_PASSWORD}@${repository} ${your_tag}
                     """)
   
                 }
