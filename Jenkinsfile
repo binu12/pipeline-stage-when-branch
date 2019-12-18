@@ -11,8 +11,6 @@ pipeline {
     }
 
     stage('Build Dev') {
-      parallel {
-        stage('Build Dev') {
           when {
             branch 'dev'
           }
@@ -20,15 +18,6 @@ pipeline {
             echo 'Building dev'
           }
         }
-
-        stage('') {
-          steps {
-            timeout(time: 10, activity: true)
-          }
-        }
-
-      }
-    }
 
     stage('tagging') {
       parallel {
