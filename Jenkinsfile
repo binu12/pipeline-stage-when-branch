@@ -3,7 +3,7 @@ pipeline {
        environment { 
         repository = "github.com/binu12/pipeline-stage-when-branch.git"
            DATETIME_TAG = java.time.LocalDateTime.now()
-                your_tag = "REL_2" + DATETIME_TAG
+           your_tag = "REL_2" + ${DATETIME_TAG}
        }
         
     stages {
