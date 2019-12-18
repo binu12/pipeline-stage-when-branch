@@ -1,5 +1,4 @@
 pipeline {
-    import java.text.SimpleDateFormat
     agent any    
        environment { 
         repository = "github.com/binu12/pipeline-stage-when-branch.git"
