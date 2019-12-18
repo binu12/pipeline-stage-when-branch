@@ -1,5 +1,13 @@
 pipeline {
     agent any
+    import java.text.SimpleDateFormat
+
+node {
+    def dateFormat = new SimpleDateFormat("yyyyMMddHHmmss")
+    def date = new Date()
+
+    println(dateFormat.format(date))
+}
        environment { 
         repository = "github.com/binu12/pipeline-stage-when-branch.git"
                 your_tag = "REL_2_0_0"
@@ -12,8 +20,7 @@ pipeline {
             }
             steps {
                 echo 'Building master'
-                def now = new Date()
-                println now.format("yyMMdd.HHmm", TimeZone.getTimeZone('UTC'))
+ 
             }
         }
         stage('Build Dev') {
