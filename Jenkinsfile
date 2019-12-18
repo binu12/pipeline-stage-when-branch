@@ -1,7 +1,6 @@
 pipeline {
-    agent any
     import java.text.SimpleDateFormat
-
+    agent any    
 node {
     def dateFormat = new SimpleDateFormat("yyyyMMddHHmmss")
     def date = new Date()
