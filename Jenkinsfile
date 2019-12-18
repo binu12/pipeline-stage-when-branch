@@ -4,6 +4,7 @@ pipeline {
         repository = "github.com/binu12/pipeline-stage-when-branch.git"
                 your_tag = "REL_2_0_0"
        }
+        def now = new Date()
     stages {
         stage('Build Master') {
             when {
@@ -11,7 +12,7 @@ pipeline {
             }
             steps {
                 echo 'Building master'
-                echo "TimeStamp: ${currentBuild.startTimeInMillis}"
+                println now.format("yyMMdd.HHmm", TimeZone.getTimeZone('UTC'))
             }
         }
         stage('Build Dev') {
