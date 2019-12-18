@@ -23,7 +23,7 @@ pipeline {
         }
         stage('tagging') {
             steps {
-                withCredentials([usernamePassword(credentialsId: GIT_CREDS, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: '00d1ed86-e252-4171-97e6-c69de2b7ac90', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                    sh("""
                         git config --global credential.username {GIT_USERNAME}
                         git config --global credential.helper "!echo password={GITPASSWORD}; echo"
