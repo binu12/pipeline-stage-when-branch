@@ -1,15 +1,10 @@
 pipeline {
     import java.text.SimpleDateFormat
     agent any    
-node {
-    def dateFormat = new SimpleDateFormat("yyyyMMddHHmmss")
-    def date = new Date()
-
-    println(dateFormat.format(date))
-}
        environment { 
         repository = "github.com/binu12/pipeline-stage-when-branch.git"
-                your_tag = "REL_2_0_0"
+           DATETIME_TAG = java.time.LocalDateTime.now()
+                your_tag = "REL_2" + DATETIME_TAG
        }
         
     stages {
