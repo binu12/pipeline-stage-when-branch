@@ -11,6 +11,7 @@ pipeline {
             }
             steps {
                 echo 'Building master'
+                echo "TimeStamp: ${currentBuild.startTimeInMillis}"
             }
         }
         stage('Build Dev') {
