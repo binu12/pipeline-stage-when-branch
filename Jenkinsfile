@@ -1,7 +1,7 @@
 pipeline {
     agent any
        environment { 
-        repository = "https://github.com/binu12/pipeline-stage-when-branch.git"
+        repository = "github.com/binu12/pipeline-stage-when-branch.git"
                 your_tag = "REL_2_0_0"
        }
     stages {
