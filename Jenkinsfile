@@ -46,7 +46,7 @@ pipeline {
   }
   environment {
     repository = 'github.com/binu12/pipeline-stage-when-branch.git'
-    DATETIME_TAG1 = new Date().format("yyyy-MM-dd-HH-mm-ss", TimeZone.getTimeZone("UTC"))
+    DATETIME_TAG1 = new Date().format("yyyyMMdd_HHmmss", TimeZone.getTimeZone("UTC"))
     DATETIME_TAG = DATETIME_TAG1.replaceAll(':', '_')
     your_tag = 'REL_2${DATETIME_TAG}'
   }
