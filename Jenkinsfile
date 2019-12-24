@@ -27,7 +27,7 @@ pipeline {
               sh """
               git tag ${your_tag}
               git push https://${GIT_USERNAME}:${GIT_PASSWORD}@${repository} ${your_tag}
-              git log ${GIT_PREVIOUS_COMMIT}..${GIT_COMMIT}
+              git log ${GIT_PREVIOUS_COMMIT}..${GIT_COMMIT} --oneline
               """
             }
 
